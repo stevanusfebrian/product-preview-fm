@@ -1,0 +1,144 @@
+/* font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-size: 0.625rem;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    /* width: 100vw; */
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.mobile-pic{
+    display: none;
+}
+
+
+.container{
+    margin:  auto 10px;
+    width: 600px;
+    /* border: 1px solid red; */
+    display: flex;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 13px;
+    font-size: 1.4em;
+    flex-wrap: wrap;
+}
+
+.desktop-pic{
+    width: 50%;
+    height: 50%;
+    border-radius: 13px 0 0 13px;
+}
+
+
+.prices{
+    display: flex;
+    align-items: center;
+}
+
+.detail{
+    width: 50%;
+    padding: 32px;
+    color: hsl(228, 12%, 48%);
+}
+
+.detail h1, .prices h2{
+    font-family: 'Fraunces', serif;
+}
+
+.detail h5{
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-top: -3px;
+}
+
+.detail h1{
+    color: hsl(212, 21%, 14%);
+}
+
+.prices h2{
+    color: hsl(158, 36%, 37%);
+    font-size: 2.3em;
+    margin-right: 20px;
+}
+
+.prices .crossed-price{
+    text-decoration:line-through;
+}
+
+button{
+    border: none;
+    border-radius: 9px;
+    background-color: hsl(158, 36%, 37%);
+    width: 100%;
+    height: 50px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button object{
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+button:hover, button:focus{
+    outline: none;
+    cursor: pointer;
+    background: hsl(159, 37%, 18%);
+    transition: 0.2s ease-in;
+    transform: translateY(1px);
+}
+
+.attribution{
+    position: absolute;
+    bottom: 10px;
+}
+/* MEDIA QUERY */
+
+@media (max-width: 610px){
+    .desktop-pic{
+        display: none;
+    }
+
+    .mobile-pic{
+        display: block;
+        width: 100%;
+        border-radius: 13px 13px 0 0;
+    }
+
+    .container{
+        margin: 20px;
+    }
+
+    .detail{
+        width: 100%;
+    }
+
+    button:hover, button:focus{
+        outline: none;
+        cursor: pointer;
+        background: hsl(159, 37%, 18%);
+        transition: 0.2s ease-in;
+        transform: translateY(1px);
+    }
+
+    .attribution{
+        display: none;
+    }
+}
